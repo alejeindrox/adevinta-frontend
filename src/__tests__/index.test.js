@@ -23,8 +23,6 @@ describe('Should return if the objects was created', () => {
     const newInput = new ControlInputs('Nuevo Input', 'text', 'inputOne');
     const newText = new ControlInputs('Nuevo Text', 'textArea', 'inputTwo');
 
-    console.log('eslint no-unused-vars: '+newItem+newModal+newButton+newInput+newText);
-
     expect(AccordionItems).toHaveBeenCalledTimes(1);
     expect(ModalItems).toHaveBeenCalledTimes(1);
     expect(ControlButtons).toHaveBeenCalledTimes(1);
