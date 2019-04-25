@@ -1,0 +1,58 @@
+@mixin buttonControl($colorButton) {
+  background-color: $colorButton;
+  border-radius: $radius;
+  border-width: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  color: #ECF0F1;
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  transition: background-color $transitionButton;
+  &:active:before {
+    padding-top: 120%;
+    transition: width $transitionButton ease-out, padding-top $transitionButton ease-out;
+    width: 120%;
+  }
+  &:before {
+    background-color: rgba(236, 240, 241, 0.3);
+    border-radius: 100%;
+    content: "";
+    display: block;
+    left: 50%;
+    padding-top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+  }
+  &:hover,
+  &:focus {
+    background-color: darken($colorButton, 10%);
+  }
+  span {
+    display: block;
+    padding: 10px 20px;
+  }
+}
+
+@mixin modalHeaderAndFooter {
+  padding: 2px 16px;
+  color: white;
+}
+
+@mixin wrapper($topMargin, $bottomMargin) {
+  background: $bgWrapper;
+  border-radius: 5px;
+  box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  float: left;
+  margin: $topMargin 10% $bottomMargin;
+  padding: 30px;
+  width: 80%;
+}

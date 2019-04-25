@@ -1,0 +1,21 @@
+.buttonControlAdd {
+  @include buttonControl($themeContrast);
+  float: right;
+}
+
+.buttonControlModal {
+  @include buttonControl($themeContrast);
+  float: right;
+}
+
+.buttonControlOne {
+  @include buttonControl($themeOne);
+}
+
+.buttonControlThree {
+  @include buttonControl($themeThree);
+}
+
+.buttonControlTwo {
+  @include buttonControl($themeTwo);
+}

@@ -1,0 +1,63 @@
+@keyframes animatetop {
+  from {
+    opacity: 0;
+    top: -300px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.modal {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  padding-top: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modalBody {
+  padding: 2px 16px;
+}
+
+.modalClose {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  &:hover,
+  &:focus {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.modalContent {
+  animation-duration: 0.4s;
+  animation-name: animatetop;
+  background-color: #fefefe;
+  border: 1px solid #888;
+  border-radius: $radius;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  padding: 0;
+  position: relative;
+  width: 80%;
+}
+
+.modalFooter {
+  @include modalHeaderAndFooter;
+  height: 55px;
+}
+
+.modalHeader {
+  @include modalHeaderAndFooter;
+}

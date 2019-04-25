@@ -1,0 +1,55 @@
+.accordionItem {
+  box-sizing: $boxSise;
+  display: block;
+  float: left;
+  width: $contentWidth;
+}
+
+.accordionItemHeading {
+  border-radius: $radius;
+  box-sizing: $boxSise;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 1.3em;
+  margin: 0px 0px 10px 0px;
+  padding: 10px;
+  width: $contentWidth;
+}
+
+.accordionWrapper {
+  @include wrapper(2%, 10%);
+}
+
+.close {
+  .accordionItemContent {
+    display: block;
+    float: left;
+    height: 0px;
+    transform: scaleY(0);
+    transition: height $transitionTime ease-out;
+  }
+}
+
+.open {
+  .accordionItemContent {
+    background-color: $bgWrapper;
+    border: 1px solid #DDD;
+    box-sizing: $boxSise;
+    display: block;
+    margin: 5px 0px 5px 0px;
+    padding: 20px;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform $transitionTime ease;
+    width: $contentWidth;
+  }
+  .accordionItemHeading {
+    background-color: $bgHeadingOpen;
+    color: #7F8C8D;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0px;
+  }
+}

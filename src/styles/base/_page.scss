@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  background: linear-gradient(to right, $bgLeftMain, $bgRightMain);
+  font-family: 'Roboto', sans-serif;
+}
+
+.controlWrapper {
+  @include wrapper(5%, 0%);
+}
+
+label {
+  color: #9b9b9b;
+  display: block;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  transition: 0.2s;
+}
