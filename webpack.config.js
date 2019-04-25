@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const entryApp = './src/index.js';
 
-const outputPath = 'build';
+const outputPath = 'docs';
 const outputFilename = 'js/app.bundle.js';
 
 const htmlTemplate = './src/index.html';
